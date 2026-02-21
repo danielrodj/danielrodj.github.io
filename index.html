@@ -1,257 +1,453 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel | Developer</title>
+    <title>Daniel | Backend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-900 text-white selection:bg-blue-500/30">
 
-    <nav class="fixed w-full z-20 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+<body class="bg-slate-900 text-white selection:bg-blue-500/30 font-sans">
+
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-bold text-blue-400 italic">&lt;Daniel Dev /&gt;</span>
             <div class="flex items-center gap-6">
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#sobre-mi" data-es="Sobre mí" data-en="About me" class="lang hover:text-blue-400 transition">Sobre mí</a>
-                    <a href="#experiencia" data-es="Trayectoria" data-en="Trajectory" class="lang hover:text-blue-400 transition">Trayectoria</a>
-                    <a href="#proyectos" data-es="Proyectos" data-en="Projects" class="lang hover:text-blue-400 transition">Proyectos</a>
+                    <a href="#sobre-mi" data-es="Sobre mí" data-en="About me"
+                        class="lang hover:text-blue-400 transition">Sobre mí</a>
+                    <a href="#experiencia" data-es="Trayectoria" data-en="Career"
+                        class="lang hover:text-blue-400 transition">Trayectoria</a>
+                    <a href="#proyectos" data-es="Proyectos" data-en="Projects"
+                        class="lang hover:text-blue-400 transition">Proyectos</a>
                 </div>
-                <button id="language-toggle" class="bg-blue-600/20 text-blue-400 px-4 py-1.5 rounded-full border border-blue-500/30 text-xs font-bold hover:bg-blue-600 hover:text-white transition">
+                <button id="language-toggle"
+                    class="bg-blue-600/10 text-blue-400 px-4 py-1.5 rounded-full border border-blue-500/30 text-xs font-bold hover:bg-blue-600 hover:text-white transition cursor-pointer">
                     EN / ES
                 </button>
             </div>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 text-center">
-        <h1 class="text-6xl font-black mb-6 tracking-tight">
-            <span data-es="Hola, soy" data-en="Hi, I am" class="lang">Hola, soy</span> 
-            <span class="text-blue-500">Daniel</span>
+    <section class="pt-48 pb-32 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
+            <span data-es="Hola, soy" data-en="Hi, I am" class="lang">Hola, soy</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Daniel</span>
         </h1>
-        <p data-es="Desarrollador Backend especializado en construir arquitecturas escalables y lógica de negocio eficiente." 
-           data-en="Backend Developer specialized in building scalable architectures and efficient business logic." 
-           class="lang text-slate-400 text-xl max-w-2xl mx-auto">
-           Desarrollador Backend especializado en construir arquitecturas escalables y lógica de negocio eficiente.
+        <p data-es="Backend Developer especializado en arquitecturas escalables y lógica de negocio en .NET."
+            data-en="Backend Developer specialized in scalable architectures and business logic in .NET."
+            class="lang text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Backend Developer especializado en arquitecturas escalables y lógica de negocio en .NET.
         </p>
-    </section>
 
-    <section id="sobre-mi" class="max-w-4xl mx-auto px-6 py-20 bg-slate-800/30 rounded-3xl border border-slate-800 scroll-mt-24">
-        <h2 data-es="Sobre mí" data-en="About me" class="lang text-3xl font-bold mb-6 text-blue-400 text-center">Sobre mí</h2>
-        
-        <p data-es="Soy un programador enfocado en el backend con experiencia sólida en lógica de negocio. Me apasiona resolver bugs complejos y optimizar procesos. Si bien mi fortaleza principal es el servidor, cuento con la capacidad técnica para integrarme fluidamente con el frontend y entregar soluciones completas."
-           data-en="I am a backend-focused programmer with solid experience in business logic. I am passionate about solving complex bugs and optimizing processes. While my main strength is the server side, I possess the technical capability to seamlessly integrate with the frontend and deliver end-to-end solutions."
-           class="lang text-slate-300 leading-relaxed text-center italic mb-10">
-           Soy un programador enfocado en el backend con experiencia sólida en lógica de negocio. Me apasiona resolver bugs complejos y optimizar procesos. Si bien mi fortaleza principal es el servidor, cuento con la capacidad técnica para integrarme fluidamente con el frontend y entregar soluciones completas.
-        </p>
-        
-        <div class="text-center mb-8">
-            <h3 data-es="Tecnologías" data-en="Tech Stack" class="lang text-sm text-slate-500 uppercase tracking-widest mb-4 font-bold">Tecnologías</h3>
-            <div class="flex flex-wrap justify-center gap-3">
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-brands fa-microsoft mr-2"></i>C# / .NET
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-brands fa-java mr-2"></i>Java
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-solid fa-database mr-2"></i>SQL Server
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-solid fa-code mr-2"></i>Entity Framework
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-brands fa-html5 mr-2"></i>HTML5
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-brands fa-css3-alt mr-2"></i>CSS3
-                </span>
-                <span class="bg-blue-900/30 text-blue-300 border border-blue-500/30 px-4 py-1 rounded-full text-sm">
-                    <i class="fa-solid fa-wind mr-2"></i>Tailwind
-                </span>
-            </div>
-        </div>
-
-        <div class="text-center mb-8">
-            <h3 data-es="Herramientas" data-en="Tools" class="lang text-sm text-slate-500 uppercase tracking-widest mb-4 font-bold">Herramientas</h3>
-            <div class="flex flex-wrap justify-center gap-3">
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-solid fa-code mr-2"></i>Visual Studio 2022
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-solid fa-file-code mr-2"></i>VS Code
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-brands fa-java mr-2"></i>NetBeans
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-solid fa-database mr-2"></i>DBeaver
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-brands fa-git-alt mr-2"></i>Git / Bitbucket
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-brands fa-jira mr-2"></i>Jira
-                </span>
-                <span class="bg-slate-700/50 border border-slate-600 px-4 py-1 rounded-full text-sm hover:bg-slate-700 transition">
-                    <i class="fa-brands fa-docker mr-2"></i>Docker
-                </span>
-            </div>
-        </div>
-
-        <div class="text-center">
-            <h3 data-es="Habilidades Blandas" data-en="Soft Skills" class="lang text-sm text-slate-500 uppercase tracking-widest mb-4 font-bold">Habilidades Blandas</h3>
-            <div class="flex flex-wrap justify-center gap-3">
-                <span class="bg-emerald-900/20 border border-emerald-500/30 text-emerald-300 px-4 py-1 rounded-full text-sm cursor-default">
-                    <i class="fa-solid fa-lightbulb mr-2 text-emerald-400"></i><span data-es="Proactividad" data-en="Proactivity" class="lang">Proactividad</span>
-                </span>
-                <span class="bg-emerald-900/20 border border-emerald-500/30 text-emerald-300 px-4 py-1 rounded-full text-sm cursor-default">
-                    <i class="fa-solid fa-puzzle-piece mr-2 text-emerald-400"></i><span data-es="Resolución de Problemas" data-en="Problem Solving" class="lang">Resolución de Problemas</span>
-                </span>
-                <span class="bg-emerald-900/20 border border-emerald-500/30 text-emerald-300 px-4 py-1 rounded-full text-sm cursor-default">
-                    <i class="fa-solid fa-chart-line mr-2 text-emerald-400"></i><span data-es="Pensamiento Analítico" data-en="Analytical Thinking" class="lang">Pensamiento Analítico</span>
-                </span>
-                <span class="bg-emerald-900/20 border border-emerald-500/30 text-emerald-300 px-4 py-1 rounded-full text-sm cursor-default">
-                    <i class="fa-solid fa-book-open mr-2 text-emerald-400"></i><span data-es="Autodidacta" data-en="Self-Taught" class="lang">Autodidacta</span>
-                </span>
-            </div>
+        <div class="mt-8 flex justify-center gap-4">
+            <a href="#proyectos"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
+                <span data-es="Ver Proyectos" data-en="View Projects" class="lang">Ver Proyectos</span>
+            </a>
+            <a href="#contacto"
+                class="border border-slate-600 hover:border-slate-400 text-slate-300 px-6 py-2 rounded-lg font-medium transition">
+                <span data-es="Contactar" data-en="Contact Me" class="lang">Contactar</span>
+            </a>
         </div>
     </section>
 
-    <section id="experiencia" class="max-w-5xl mx-auto px-6 py-20 scroll-mt-20">
-        <h2 data-es="Trayectoria Profesional" data-en="Professional Career" class="lang text-3xl font-bold mb-12 text-center md:text-left">Trayectoria</h2>
-        
-        <div class="space-y-12">
-            
-            <div class="border-l-4 border-blue-500 pl-8 relative pb-2">
-                <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-blue-500 border-4 border-slate-900"></div>
-                <span class="text-blue-400 font-mono text-sm uppercase tracking-wide">Feb 2025 - Feb 2026</span>
-                <h3 class="text-2xl font-bold mt-1 text-white">Backend Developer</h3>
-                <p class="text-slate-400 mb-4 italic">Porto Kale Technologies</p>
-                <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm md:text-base">
-                    <li data-es="Desarrollo y mantenimiento de APIs REST en .NET que sirven de base para aplicaciones web." 
-                        data-en="Development and maintenance of .NET REST APIs serving as the foundation for web applications." class="lang">
-                        Desarrollo y mantenimiento de APIs REST en .NET que sirven de base para aplicaciones web.
+    <section id="sobre-mi" class="max-w-4xl mx-auto px-6 py-24 scroll-mt-24">
+        <div class="bg-slate-800/30 rounded-3xl border border-slate-700/50 p-8 md:p-12 backdrop-blur-sm">
+            <h2 data-es="Sobre mí" data-en="About me" class="lang text-3xl font-bold mb-8 text-blue-400 text-center">
+                Sobre mí</h2>
+
+            <p data-es="Soy un desarrollador enfocado en el backend con experiencia sólida en lógica de negocio. Me apasiona resolver problemas complejos y optimizar el rendimiento. Si bien mi fortaleza principal es el servidor, poseo la capacidad técnica para integrarme fluidamente con equipos frontend y entregar soluciones completas."
+                data-en="I am a backend-focused developer with solid experience in business logic. I am passionate about solving complex problems and optimizing performance. While my main strength lies in server-side development, I possess the technical capability to seamlessly integrate with frontend teams and deliver end-to-end solutions."
+                class="lang text-slate-300 leading-relaxed text-center text-lg italic mb-12">
+                Soy un desarrollador enfocado en el backend con experiencia sólida en lógica de negocio. Me apasiona
+                resolver
+                problemas complejos y optimizar el rendimiento. Si bien mi fortaleza principal es el servidor, poseo la
+                capacidad
+                técnica para integrarme fluidamente con equipos frontend y entregar soluciones completas.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="text-center">
+                    <h3 data-es="Tecnologías Core" data-en="Core Stack"
+                        class="lang text-xs text-slate-500 uppercase tracking-widest mb-4 font-bold">Tecnologías Core
+                    </h3>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span
+                            class="bg-blue-900/20 text-blue-300 border border-blue-500/20 px-3 py-1 rounded text-sm hover:border-blue-400 transition cursor-default">
+                            <i class="fa-brands fa-microsoft mr-2"></i>C# / .NET
+                        </span>
+                        <span
+                            class="bg-blue-900/20 text-blue-300 border border-blue-500/20 px-3 py-1 rounded text-sm hover:border-blue-400 transition cursor-default">
+                            <i class="fa-solid fa-database mr-2"></i>SQL Server
+                        </span>
+                        <span
+                            class="bg-blue-900/20 text-blue-300 border border-blue-500/20 px-3 py-1 rounded text-sm hover:border-blue-400 transition cursor-default">
+                            <i class="fa-solid fa-code mr-2"></i>Entity Framework
+                        </span>
+                        <span
+                            class="bg-blue-900/20 text-blue-300 border border-blue-500/20 px-3 py-1 rounded text-sm hover:border-blue-400 transition cursor-default">
+                            <i class="fa-brands fa-java mr-2"></i>Java
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h3 data-es="Herramientas" data-en="Tools"
+                        class="lang text-xs text-slate-500 uppercase tracking-widest mb-4 font-bold">Herramientas</h3>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            Visual Studio
+                        </span>
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            VS Code
+                        </span>
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            Git
+                        </span>
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            DBeaver
+                        </span>
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            Jira
+                        </span>
+                        <span class="bg-slate-700/30 border border-slate-600 px-3 py-1 rounded text-sm text-slate-300">
+                            Postman
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-slate-700/50 text-center">
+                <h3 data-es="Habilidades Blandas" data-en="Soft Skills"
+                    class="lang text-xs text-slate-500 uppercase tracking-widest mb-4 font-bold">Habilidades Blandas
+                </h3>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-emerald-300">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                        <span data-es="Proactividad" data-en="Proactivity" class="lang">Proactividad</span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                        <span data-es="Resolución de Problemas" data-en="Problem Solving" class="lang">Resolución de
+                            Problemas</span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                        <span data-es="Pensamiento Analítico" data-en="Analytical Thinking" class="lang">Pensamiento
+                            Analítico</span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                        <span data-es="Autodidacta" data-en="Self-Taught" class="lang">Autodidacta</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="max-w-5xl mx-auto px-6 py-24 scroll-mt-20">
+        <h2 data-es="Trayectoria Profesional" data-en="Professional Career"
+            class="lang text-3xl font-bold mb-16 text-center md:text-left border-b border-slate-800 pb-4 inline-block">
+            Trayectoria</h2>
+
+        <div class="space-y-16 relative">
+            <div class="hidden md:block absolute left-[9px] top-2 bottom-0 w-0.5 bg-slate-800"></div>
+
+            <div class="relative pl-0 md:pl-12">
+                <div
+                    class="hidden md:block absolute left-0 top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-slate-900 z-10">
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                    <h3 class="text-2xl font-bold text-white">Backend Developer</h3>
+                    <span class="hidden sm:block text-slate-600 mx-2">•</span>
+                    <span
+                        class="text-blue-400 font-mono text-sm uppercase tracking-wide bg-blue-900/20 px-2 py-1 rounded w-fit">Feb
+                        2025 - Feb 2026</span>
+                </div>
+
+                <p class="text-lg text-slate-300 font-medium mb-4">Porto Kale Technologies</p>
+
+                <ul class="list-disc list-inside text-slate-400 space-y-3 text-sm md:text-base leading-relaxed">
+                    <li data-es="Desarrollo y mantenimiento de APIs REST en .NET enfocadas en lógica de negocio, operaciones CRUD y validaciones robustas."
+                        data-en="Development and maintenance of .NET REST APIs focused on business logic, CRUD operations, and robust validations."
+                        class="lang">
+                        Desarrollo y mantenimiento de APIs REST en .NET enfocadas en lógica de negocio, operaciones CRUD
+                        y validaciones robustas.
                     </li>
-                    <li data-es="Integración de APIs de terceros para automatización de flujos de comunicación masiva." 
-                        data-en="Integration of third-party APIs for mass communication flow automation." class="lang">
+                    <li data-es="Integración de APIs de terceros para automatización de flujos de comunicación masiva."
+                        data-en="Integration of third-party APIs to automate mass communication workflows."
+                        class="lang">
                         Integración de APIs de terceros para automatización de flujos de comunicación masiva.
                     </li>
-                    <li data-es="Resolución de bugs críticos y optimización de procesos operativos (generación de reportes)." 
-                        data-en="Resolution of critical bugs and optimization of operational processes (report generation)." class="lang">
-                        Resolución de bugs críticos y optimización de procesos operativos (generación de reportes).
+                    <li data-es="Refactorización y optimización de código legado para mejorar el rendimiento y la mantenibilidad."
+                        data-en="Refactoring and optimization of legacy code to improve performance and maintainability."
+                        class="lang">
+                        Refactorización y optimización de código legado para mejorar el rendimiento y la mantenibilidad.
+                    </li>
+                    <li data-es="Análisis y depuración de errores mediante monitoreo de logs en Azure."
+                        data-en="Error analysis and debugging through Azure log monitoring." class="lang">
+                        Análisis y depuración de errores mediante monitoreo de logs en Azure.
                     </li>
                 </ul>
             </div>
 
-            <div class="border-l-4 border-emerald-500 pl-8 relative pb-2">
-                <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-emerald-500 border-4 border-slate-900"></div>
-                <span data-es="Feb 2024 - Dic 2024" data-en="Feb 2024 - Dec 2024" class="lang text-emerald-400 font-mono text-sm uppercase tracking-wide">Feb 2024 - Dic 2024</span>
-                <h3 data-es="Desarrollador de herramientas internas / Soporte de IT" data-en="Internal Tools Developer / IT Support" class="lang text-2xl font-bold mt-1 text-white">
-                    Desarrollador de herramientas internas / Soporte de IT
-                </h3>
-                <p class="text-slate-400 mb-4 italic">ABC Technologies</p>
-                
-                <p data-es="Detecté la falta de trazabilidad en las etiquetas impresas fuera del sistema Andon principal y lideré el desarrollo de una solución a medida." 
-                   data-en="Detected the lack of traceability in labels printed outside the main Andon system and led the development of a custom solution." 
-                   class="lang text-slate-300 text-sm md:text-base mb-4">
-                   Detecté la falta de trazabilidad en las etiquetas impresas fuera del sistema Andon principal y lideré el desarrollo de una solución a medida.
+            <div class="relative pl-0 md:pl-12">
+                <div
+                    class="hidden md:block absolute left-0 top-2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-slate-900 z-10">
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                    <h3 data-es="Desarrollador de herramientas internas" data-en="Internal Tools Developer"
+                        class="lang text-2xl font-bold text-white">
+                        Desarrollador de herramientas internas
+                    </h3>
+                    <span class="hidden sm:block text-slate-600 mx-2">•</span>
+                    <span data-es="Feb 2024 - Dic 2024" data-en="Feb 2024 - Dec 2024"
+                        class="lang text-emerald-400 font-mono text-sm uppercase tracking-wide bg-emerald-900/20 px-2 py-1 rounded w-fit">Feb
+                        2024 - Dic 2024</span>
+                </div>
+
+                <p class="text-lg text-slate-300 font-medium mb-4">ABC Technologies</p>
+
+                <p data-es="Lideré el desarrollo de una solución a medida tras detectar la falta de trazabilidad en etiquetas impresas fuera del sistema central."
+                    data-en="Led the development of a custom solution after detecting a lack of traceability in labels printed outside the central system."
+                    class="lang text-slate-400 text-sm md:text-base mb-4 italic">
+                    Lideré el desarrollo de una solución a medida tras detectar la falta de trazabilidad en etiquetas
+                    impresas fuera del sistema central.
                 </p>
-                
-                <div class="bg-slate-800/40 p-4 rounded-xl border border-emerald-500/20">
-                    <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm">
-                        <li data-es="Levantamiento de requisitos y definición total del cronograma del proyecto." data-en="Requirement gathering and project timeline definition." class="lang">Levantamiento de requisitos y definición total del cronograma del proyecto.</li>
-                        <li data-es="Diseño de una arquitectura ligera ('Serverless') para evadir burocracia de servidores." data-en="Design of a lightweight ('Serverless') architecture to bypass server bureaucracy." class="lang">Diseño de una arquitectura ligera ('Serverless') para evadir burocracia de servidores.</li>
-                        <li data-es="Entrega exitosa y despliegue del módulo de 'Label Manager'." data-en="Successful delivery and deployment of the 'Label Manager' module." class="lang">Entrega exitosa y despliegue del módulo de 'Label Manager'.</li>
+
+                <div class="bg-slate-800/50 p-5 rounded-xl border-l-2 border-emerald-500/50">
+                    <ul class="list-disc list-inside text-slate-400 space-y-2 text-sm">
+                        <li data-es="Levantamiento de requisitos y definición del cronograma del proyecto."
+                            data-en="Requirements gathering and project timeline definition." class="lang">
+                            Levantamiento de requisitos y definición del cronograma del proyecto.</li>
+                        <li data-es="Diseño de arquitectura ligera ('Serverless') para agilizar el despliegue y reducir dependencias."
+                            data-en="Designed a lightweight ('Serverless') architecture to streamline deployment and reduce dependencies."
+                            class="lang">
+                            Diseño de arquitectura ligera ('Serverless') para agilizar el despliegue y reducir
+                            dependencias.</li>
+                        <li data-es="Entrega exitosa y despliegue del módulo 'Label Manager'."
+                            data-en="Successful delivery and deployment of the 'Label Manager' module." class="lang">
+                            Entrega exitosa y despliegue del módulo 'Label Manager'.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-l-4 border-indigo-500 pl-8 relative pb-2">
-                <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-indigo-500 border-4 border-slate-900"></div>
-                <span data-es="Ago 2017 - Dic 2024" data-en="Aug 2017 - Dec 2024" class="lang text-indigo-400 font-mono text-sm uppercase tracking-wide">Ago 2017 - Dic 2024</span>
-                <h3 data-es="Ingeniería en sistemas computacionales" data-en="Computer systems engineering" class="lang text-2xl font-bold mt-1 text-white">
-                    Ingeniería en sistemas computacionales
-                </h3>
-                <p class="text-slate-400 mb-2 italic">Instituto Tecnológico de Saltillo</p>
-                <p data-es="Proyecto escolar, gestión médica evaluado como 'Listo para producción y distribución'." 
-                   data-en="School project, medical management evaluated as 'Ready for production and distribution'." 
-                   class="lang text-slate-300 text-sm md:text-base">
-                   Proyecto escolar, gestión médica evaluado como 'Listo para producción y distribución'.
+            <div class="relative pl-0 md:pl-12">
+                <div
+                    class="hidden md:block absolute left-0 top-2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-slate-900 z-10">
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                    <h3 data-es="Ingeniería en Sistemas Computacionales" data-en="Computer Systems Engineering"
+                        class="lang text-xl font-bold text-white">
+                        Ingeniería en Sistemas Computacionales
+                    </h3>
+                    <span class="hidden sm:block text-slate-600 mx-2">•</span>
+                    <span data-es="Graduado Dic 2024" data-en="Graduated Dec 2024"
+                        class="lang text-indigo-400 font-mono text-sm uppercase tracking-wide bg-indigo-900/20 px-2 py-1 rounded w-fit">Graduado
+                        Dic 2024</span>
+                </div>
+
+                <p class="text-lg text-slate-300 font-medium mb-2">Instituto Tecnológico de Saltillo</p>
+                <p data-es="Proyecto destacado: Sistema de gestión médica evaluado como 'Listo para producción'."
+                    data-en="Featured project: Medical management system evaluated as 'Production Ready'."
+                    class="lang text-slate-400 text-sm md:text-base">
+                    Proyecto destacado: Sistema de gestión médica evaluado como 'Listo para producción'.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-800">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div>
+                <h2 data-es="Proyectos Destacados" data-en="Featured Projects"
+                    class="lang text-3xl font-bold text-white">Proyectos Destacados</h2>
+                <p data-es="Una selección de mis trabajos técnicos más recientes."
+                    data-en="A selection of my recent technical work." class="lang text-slate-400 mt-2">Una selección de
+                    mis trabajos técnicos más recientes.</p>
+            </div>
+            <a href="https://github.com/DanielRodJ" target="_blank"
+                class="text-sm text-blue-400 hover:text-blue-300 transition flex items-center gap-2">
+                <span data-es="Ver todo en GitHub" data-en="View all on GitHub" class="lang">Ver todo en GitHub</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="md:col-span-2 relative group flex flex-col h-full">
+                <div
+                    class="absolute -inset-0.5 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500">
+                </div>
+
+                <div
+                    class="relative bg-slate-900 p-8 rounded-2xl hover:bg-slate-800/80 transition border border-slate-700 hover:border-emerald-500/50 h-full flex flex-col md:flex-row gap-8 items-start">
+
+                    <div class="flex-1 w-full">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex flex-col gap-1">
+                                <div class="flex items-center gap-3">
+                                    <h3 class="text-2xl font-bold text-emerald-400 group-hover:text-emerald-300">
+                                        Label Manager
+                                    </h3>
+                                    <span data-es="Destacado" data-en="Featured"
+                                        class="lang text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                                        Destacado
+                                    </span>
+                                </div>
+                                <span class="text-xs font-mono text-slate-500">Java / Data Analytics</span>
+                            </div>
+                            <div class="p-3 bg-slate-800 rounded-lg border border-slate-700">
+                                <i class="fa-solid fa-box-open text-emerald-400 text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <p data-es="Aplicación de escritorio para rastrear etiquetas generadas fuera del flujo estándar. Incluye dashboard estadístico para visualizar tendencias de fallos, mejorando la trazabilidad de producción."
+                            data-en="Desktop application to track labels generated outside standard flow. Includes statistical dashboard to visualize failure trends, improving production traceability."
+                            class="lang text-slate-300 mb-6 text-base leading-relaxed">
+                            Aplicación de escritorio para rastrear etiquetas generadas fuera del flujo estándar. Incluye
+                            dashboard estadístico para visualizar tendencias de fallos, mejorando la trazabilidad de
+                            producción.
+                        </p>
+
+                        <div class="flex gap-4 mb-8">
+                            <a href="https://github.com/DanielRodJ/label-manager" target="_blank"
+                                class="text-sm font-medium text-white bg-slate-800 hover:bg-emerald-600 border border-slate-600 hover:border-emerald-500 px-4 py-2 rounded-lg transition flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-es="Ver Código" data-en="View Code" class="lang">
+                                    Ver Código
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-xs font-bold text-emerald-200 bg-emerald-900/40 border border-emerald-500/30 px-3 py-1.5 rounded-md">Java
+                                Swing</span>
+                            <span
+                                class="text-xs font-bold text-emerald-200 bg-emerald-900/40 border border-emerald-500/30 px-3 py-1.5 rounded-md">Data
+                                Analytics</span>
+                            <span
+                                class="text-xs font-bold text-emerald-200 bg-emerald-900/40 border border-emerald-500/30 px-3 py-1.5 rounded-md">CSV
+                                Persistence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="bg-slate-800/40 p-6 rounded-2xl hover:bg-slate-800 transition border border-slate-700/50 hover:border-blue-500/50 group flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-lg font-bold text-blue-400 group-hover:text-blue-300">Sorteos API</h3>
+                    <i class="fa-solid fa-server text-slate-600 text-xl group-hover:text-blue-500/50 transition"></i>
+                </div>
+
+                <p class="text-slate-400 mb-6 text-sm leading-relaxed flex-grow">
+                    <span data-es="En desarrollo:" data-en="In development:" class="lang font-bold text-blue-400">En
+                        desarrollo:</span>
+                    <span
+                        data-es="API REST para la gestión de sorteos. Arquitectura CQRS con MediatR, validaciones y manejo de transacciones."
+                        data-en="REST API for raffle management. CQRS architecture with MediatR, validations, and transaction handling."
+                        class="lang">
+                        API REST para la gestión de sorteos. Arquitectura CQRS con MediatR, validaciones y manejo de
+                        transacciones.
+                    </span>
+                </p>
+
+                <div class="flex justify-between items-end mt-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-mono text-blue-400/80 bg-blue-900/20 px-2 py-1 rounded">C#</span>
+                        <span class="text-xs font-mono text-blue-400/80 bg-blue-900/20 px-2 py-1 rounded">CQRS</span>
+                        <span class="text-xs font-mono text-blue-400/80 bg-blue-900/20 px-2 py-1 rounded">SQL</span>
+                    </div>
+                    <a href="https://github.com/DanielRodJ/sorteos-api" target="_blank"
+                        class="text-slate-500 hover:text-white transition">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-slate-800/40 p-6 rounded-2xl hover:bg-slate-800 transition border border-slate-700/50 hover:border-indigo-500/50 group flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-lg font-bold text-indigo-400 group-hover:text-indigo-300">Medical Clinic</h3>
+                    <i
+                        class="fa-solid fa-user-doctor text-slate-600 text-xl group-hover:text-indigo-500/50 transition"></i>
+                </div>
+
+                <p data-es="Sistema integral de gestión para consultorio médico. Control de roles (RBAC), agenda de citas, historial clínico y generación de recetas PDF."
+                    data-en="Comprehensive management system for a medical clinic. Role control (RBAC), appointment scheduling, medical history, and PDF prescription generation."
+                    class="lang text-slate-400 mb-6 text-sm leading-relaxed flex-grow">
+                    Sistema integral de gestión para consultorio médico. Control de roles (RBAC), agenda de citas,
+                    historial clínico y generación de recetas PDF.
+                </p>
+
+                <div class="flex justify-between items-end mt-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="text-xs font-mono text-indigo-400/80 bg-indigo-900/20 px-2 py-1 rounded">Java</span>
+                        <span
+                            class="text-xs font-mono text-indigo-400/80 bg-indigo-900/20 px-2 py-1 rounded">MySQL</span>
+                    </div>
+                    <a href="https://github.com/DanielRodJ/medical-clinic" target="_blank"
+                        class="text-slate-500 hover:text-white transition">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="proyectos" class="max-w-5xl mx-auto px-6 pb-20 pt-10 border-t border-slate-800">
-        <h2 data-es="Proyectos Destacados" data-en="Featured Projects" class="lang text-3xl font-bold mb-12 text-center md:text-left">Proyectos Destacados</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="bg-slate-800/50 p-8 rounded-2xl hover:bg-slate-800 transition border border-transparent hover:border-emerald-500/50 group flex flex-col">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-bold text-emerald-400 group-hover:text-emerald-300">Label Manager</h3>
-                    <i class="fa-solid fa-box-open text-slate-600 text-2xl"></i>
-                </div>
-                
-                <a href="https://github.com/DanielRodJ/label-manager" target="_blank" class="text-xs text-slate-500 hover:text-white mb-4 flex items-center gap-1 w-fit transition">
-                    <i class="fa-brands fa-github"></i> <span data-es="Ver repositorio" data-en="View repository" class="lang">Ver repositorio</span>
-                </a>
-
-                <p data-es="Aplicación de escritorio para rastrear etiquetas generadas fuera del flujo normal. Incluye estadísticas para deducir causas de fallos y visualizar tendencias de impresión y reimpresión por área." 
-                   data-en="Desktop application to track labels generated outside the normal flow. Includes statistics to deduce failure causes and visualize printing and reprinting trends by area." 
-                   class="lang text-slate-400 mb-6 text-sm leading-relaxed">
-                   Aplicación de escritorio para rastrear etiquetas generadas fuera del flujo normal. Incluye estadísticas para deducir causas de fallos y visualizar tendencias de impresión y reimpresión por área.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-auto">
-                    <span class="text-xs font-mono text-emerald-300 bg-emerald-900/20 px-2 py-1 rounded">JavaSwing</span>
-                    <span class="text-xs font-mono text-emerald-300 bg-emerald-900/20 px-2 py-1 rounded">CSV Persistence</span>
-                    <span class="text-xs font-mono text-emerald-300 bg-emerald-900/20 px-2 py-1 rounded">Data Analytics</span>
-                </div>
-            </div>
-
-            <div class="bg-slate-800/50 p-8 rounded-2xl hover:bg-slate-800 transition border border-transparent hover:border-indigo-500/50 group flex flex-col">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-bold text-indigo-400 group-hover:text-indigo-300">Medical Clinic</h3>
-                    <i class="fa-solid fa-user-doctor text-slate-600 text-2xl"></i>
-                </div>
-
-                <a href="https://github.com/DanielRodJ/medical-clinic" target="_blank" class="text-xs text-slate-500 hover:text-white mb-4 flex items-center gap-1 w-fit transition">
-                    <i class="fa-brands fa-github"></i> <span data-es="Ver repositorio" data-en="View repository" class="lang">Ver repositorio</span>
-                </a>
-
-                <p data-es="Aplicación de escritorio desarrollada como proyecto universitario. Simula un consultorio médico escolar con roles para Alumno, Médico y Secretario. Gestiona el flujo completo: desde agenda de citas y carga de servicios hasta la generación de pases de urgencia y recetas médicas." 
-                   data-en="Desktop application developed as a university project. Simulates a school medical clinic with roles for Student, Doctor, and Secretary. Manages the complete flow: from appointment scheduling and service loading to generating emergency passes and medical prescriptions." 
-                   class="lang text-slate-400 mb-6 text-sm leading-relaxed">
-                   Aplicación de escritorio desarrollada como proyecto universitario. Simula un consultorio médico escolar con roles para Alumno, Médico y Secretario. Gestiona el flujo completo: desde agenda de citas y carga de servicios hasta la generación de pases de urgencia y recetas médicas.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-auto">
-                    <span class="text-xs font-mono text-indigo-300 bg-indigo-900/20 px-2 py-1 rounded">Java Swing</span>
-                    <span class="text-xs font-mono text-indigo-300 bg-indigo-900/20 px-2 py-1 rounded">MySQL</span>
-                    <span class="text-xs font-mono text-indigo-300 bg-indigo-900/20 px-2 py-1 rounded">RBAC / iText</span>
-                </div>
-            </div>
-
+    <footer id="contacto" class="py-24 text-center border-t border-slate-800 bg-slate-900 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50">
         </div>
-    </section>
 
-    <footer id="contacto" class="py-20 text-center border-t border-slate-800 bg-slate-900">
-        <h2 data-es="Contacto" data-en="Contact" class="lang text-2xl font-bold mb-6">Contacto</h2>
-        
-        <p data-es="¿Tienes una vacante backend? Hablemos." 
-           data-en="Do you have a backend opening? Let's talk."
-           class="lang text-slate-500 mb-8 max-w-md mx-auto">
-           ¿Tienes una vacante backend? Hablemos.
+        <h2 data-es="¿Listo para trabajar juntos?" data-en="Ready to work together?"
+            class="lang text-2xl md:text-3xl font-bold mb-6 text-white">¿Listo para trabajar juntos?</h2>
+
+        <p data-es="Actualmente disponible para oportunidades Backend."
+            data-en="Currently available for Backend opportunities."
+            class="lang text-slate-400 mb-10 max-w-md mx-auto text-lg">
+            Actualmente disponible para oportunidades Backend.
         </p>
-        
-        <div class="flex justify-center gap-8 text-3xl">
-            <a href="https://github.com/DanielRodJ" target="_blank" class="text-slate-400 hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/daniel-rodriguez-juarez/" target="_blank" class="text-slate-400 hover:text-blue-500 transition transform hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:adaniel.jrodriguez@gmail.com" class="text-slate-400 hover:text-emerald-400 transition transform hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+
+        <div class="flex justify-center gap-10 text-3xl mb-12">
+            <a href="https://github.com/DanielRodJ" target="_blank"
+                class="text-slate-500 hover:text-white transition transform hover:scale-110 hover:-translate-y-1 duration-300"
+                title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-rodriguez-juarez/" target="_blank"
+                class="text-slate-500 hover:text-blue-500 transition transform hover:scale-110 hover:-translate-y-1 duration-300"
+                title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:adaniel.jrodriguez@gmail.com"
+                class="text-slate-500 hover:text-emerald-400 transition transform hover:scale-110 hover:-translate-y-1 duration-300"
+                title="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
-        <p class="text-slate-700 text-xs mt-10">© 2026 Daniel Dev Portfolio</p>
+        <p class="text-slate-700 text-xs font-mono">© 2026 Daniel Dev Portfolio</p>
     </footer>
 
     <script>
@@ -262,10 +458,17 @@
         btn.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             textsToChange.forEach(el => {
-                el.textContent = el.getAttribute(`data-${currentLang}`);
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) {
+                    el.textContent = translation;
+                }
             });
             btn.textContent = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
+
+            document.body.classList.add('opacity-90');
+            setTimeout(() => document.body.classList.remove('opacity-90'), 200);
         });
     </script>
 </body>
+
 </html>
